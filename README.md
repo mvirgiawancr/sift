@@ -2,6 +2,8 @@
 
 **Every review, sorted by what to fix.**
 
+**Live demo: [sift.virlabs.my.id](https://sift.virlabs.my.id)**
+
 Sift turns a pile of customer feedback (App Store reviews, support tickets, survey answers) into a short, ranked list of problems. Paste the text or upload a CSV. An AI model groups the responses into themes, scores each one from negative to positive, and puts the theme that is hurting you most at the top, with a recommended next step.
 
 ![Sift overview dashboard](public/shots/overview.png)
