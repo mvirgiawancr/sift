@@ -69,6 +69,7 @@ export default function Import() {
         <p className="mt-2 max-w-[58ch] text-ink-2">
           Paste one response per line, or upload a CSV. Sift groups it into themes, scores each response and ranks what to fix. Up to {MAX} responses at a time.
         </p>
+        <p className="mt-2 font-mono text-xs text-muted">Public demo · a few analyses per visitor each hour</p>
       </header>
 
       {configured === false && (

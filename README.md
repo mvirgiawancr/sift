@@ -47,8 +47,12 @@ Open http://localhost:3000. The landing page is at `/` and the app is at `/app`.
 | `LLM_API_KEY` | yes, to analyze your own feedback | your provider's API key |
 | `LLM_BASE_URL` | no (defaults to OpenAI) | `https://generativelanguage.googleapis.com/v1beta/openai` for Gemini |
 | `LLM_MODEL` | no (defaults to `gpt-4o-mini`) | `gemini-2.5-flash` |
+| `RATE_LIMIT_PER_HOUR` | no (default `5`) | analyses allowed per visitor (IP) per rolling hour |
+| `RATE_LIMIT_PER_DAY` | no (default `100`) | analyses allowed for everyone per rolling 24 hours |
 
 Without `LLM_API_KEY` the import page explains that analysis is off, and the sample dataset still works.
+
+The limits keep a public demo's API bill small. They live in memory, so on serverless hosts they reset on cold starts and aren't shared between instances. Swap in a shared store such as Upstash Redis if you need strict limits. Failed AI calls don't count against the visitor.
 
 ## Importing feedback
 
